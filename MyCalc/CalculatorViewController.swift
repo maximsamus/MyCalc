@@ -22,6 +22,11 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func numberButtonPressed(_ sender: UIButton) {
+        
+        if let numValue = sender.currentTitle {
+            displayLabel.text = numValue
+
+        }
     }
     
     
