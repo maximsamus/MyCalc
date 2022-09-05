@@ -12,20 +12,28 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var displayLabel: UILabel!
     
     private var isFinishedTypingNumber = true
+    private var displayValue: Double {
+        get {
+            guard let number = Double(displayLabel.text!) else { fatalError("fatalError") }
+            return number
+        }
+        set {
+            displayLabel.text = String(newValue)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
+        
         isFinishedTypingNumber = true
-        guard let number = Double(displayLabel.text ?? "") else { return }
         
         switch sender.currentTitle {
-        case "+/-": displayLabel.text = String(format: "%.0f", number * -1)
+        case "+/-": displayValue *= -1
         case "AC": displayLabel.text = "0"
-        default: displayLabel.text = String(number / 100)
+        default: displayValue *= 0.01
         }
     }
     
@@ -37,8 +45,7 @@ class CalculatorViewController: UIViewController {
                 isFinishedTypingNumber = false
             } else {
                 if numValue == "." {
-                    guard let currentNumber = Double(displayLabel.text!) else { return }
-                    let isInt = floor(currentNumber) == currentNumber
+                    let isInt = floor(displayValue) == displayValue
                     if !isInt {
                         return
                     }
