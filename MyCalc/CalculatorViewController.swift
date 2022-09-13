@@ -11,6 +11,7 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var displayLabel: UILabel!
     
+    private var calculator = CalculatorLogic()
     private var isFinishedTypingNumber = true
     private var displayValue: Double {
         get {
@@ -30,9 +31,11 @@ class CalculatorViewController: UIViewController {
         
         isFinishedTypingNumber = true
         
+        calculator.setNumber(displayValue)
+        
         if let calcMethod = sender.currentTitle {
-            let calculator = CalculatorLogic(number: displayValue)
-            displayValue = calculator.calculate(symbol: calcMethod)
+            guard let result = calculator.calculate(symbol: calcMethod) else { return }
+            displayValue = result
         }
     }
     
