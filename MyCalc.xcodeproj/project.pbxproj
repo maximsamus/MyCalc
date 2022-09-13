@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F704E9E928D056B900428908 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F704E9E828D056B900428908 /* CalculatorLogic.swift */; };
 		F744082F28C4BC92006B036E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744082E28C4BC92006B036E /* AppDelegate.swift */; };
 		F744083128C4BC92006B036E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744083028C4BC92006B036E /* SceneDelegate.swift */; };
 		F744083328C4BC92006B036E /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F744083228C4BC92006B036E /* CalculatorViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F704E9E828D056B900428908 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 		F744082B28C4BC92006B036E /* MyCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F744082E28C4BC92006B036E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F744083028C4BC92006B036E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F744082E28C4BC92006B036E /* AppDelegate.swift */,
 				F744083028C4BC92006B036E /* SceneDelegate.swift */,
 				F744083228C4BC92006B036E /* CalculatorViewController.swift */,
+				F704E9E828D056B900428908 /* CalculatorLogic.swift */,
 				F744083728C4BC93006B036E /* Assets.xcassets */,
 				F744084228C4BCBE006B036E /* Main.storyboard */,
 				F744083928C4BC93006B036E /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F704E9E928D056B900428908 /* CalculatorLogic.swift in Sources */,
 				F744083328C4BC92006B036E /* CalculatorViewController.swift in Sources */,
 				F744082F28C4BC92006B036E /* AppDelegate.swift in Sources */,
 				F744083128C4BC92006B036E /* SceneDelegate.swift in Sources */,

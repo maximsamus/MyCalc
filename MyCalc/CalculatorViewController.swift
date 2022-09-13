@@ -30,10 +30,9 @@ class CalculatorViewController: UIViewController {
         
         isFinishedTypingNumber = true
         
-        switch sender.currentTitle {
-        case "+/-": displayValue *= -1
-        case "AC": displayLabel.text = "0"
-        default: displayValue *= 0.01
+        if let calcMethod = sender.currentTitle {
+            let calculator = CalculatorLogic(number: displayValue)
+            displayValue = calculator.calculate(symbol: calcMethod)
         }
     }
     
